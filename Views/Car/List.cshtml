@@ -1,0 +1,10 @@
+﻿@using CarShopCourseWork.Model.Data
+
+<h2>@Model.CurrentMake</h2>
+
+@{
+    foreach (Car car in Model.Cars)
+    {
+        @await Html.PartialAsync("CarSummary", car)
+    }
+}

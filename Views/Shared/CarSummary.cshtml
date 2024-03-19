@@ -1,0 +1,22 @@
+﻿@model CarShopCourseWork.Model.Data.Car
+
+<div class="car-container">
+    <img src="@Model.ImageThumbnailUrl" alt="" class="car-image">
+    <div class="car-details">
+        <div class="price">@Model.Price.ToString("c")</div>
+        <h3>
+            <a asp-controller="Car" asp-action="Details" asp-route-carId="@Model.CarId">@Model.Make?.MakeName @Model.Model</a>
+        </h3>
+        <span style="color: white">Value For Money: </span>
+        <div class="value-for-money" style="background: @Model.ValueForMoneyColor">
+            @(Model.ValueForMoney)
+        </div>
+    </div>
+    <div class="addToCart text-right">
+        <p class="button">
+            <a class="add" id="cartButton" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-carId="@Model.CarId">
+                Add to cart
+            </a>
+        </p>
+    </div>
+</div>
