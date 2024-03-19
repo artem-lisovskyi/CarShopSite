@@ -1,0 +1,1 @@
+This is ASP.NET Core MVC + Entity Framework web application for sales the cars. It have ability to add car into cart and make orders. It also have ability to sort cars by makes and search them by name. Also in this app has implemented machine learning algorithm for classiify car by value to money criteria.
